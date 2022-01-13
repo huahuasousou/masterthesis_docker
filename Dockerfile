@@ -1,2 +1,2 @@
-FROM tensorflow/tensorflow:1.4.0-devel-gpu
-RUN apt-get update && apt upgrade -y && apt-get install -y openssl ca-certificates wget libboost-all-dev && pip install Pillow scikit-image && apt-get clean
+FROM tensorflow/tensorflow:1.8.0-gpu-py3
+RUN apt-get update && apt upgrade -y && apt-get install -y git libgl1-mesa-glx openssl ca-certificates wget libboost-all-dev && pip3 install --upgrade pip && pip3 install Pillow scikit-image opencv-python Keras==2.2.4 && apt-get clean
