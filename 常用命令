@@ -1,0 +1,13 @@
+docker build -t keras-cliu:2.2.4  .
+
+docker run -it --gpus all -v /home/liuchenghua/kitti_object_vis/data/object/training:/kitti/training -v /home/liuchenghua/test_detection/:/test_detection keras-cliu:2.2.4 bash
+docker pull tensorflow/tensorflow:1.12.3-py3
+
+apt install git libgl1-mesa-glx -y
+pip3 install --upgrade pip
+pip install keras-gpu
+pip3 install opencv-python
+pip3 install Keras==2.2.4
+
+git clone https://github.com/ferdyandannes/Monocular-3D-Object-Detection.git
+python3 train_1010.py
