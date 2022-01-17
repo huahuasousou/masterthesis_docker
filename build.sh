@@ -1,2 +1,2 @@
 # bin/bash
-docker build ./ -t tensorflow:1.4-cliu
+docker build ./ -t tensorflow:mononet3d-cliu
