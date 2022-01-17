@@ -11,3 +11,6 @@ pip3 install Keras==2.2.4
 
 git clone https://github.com/ferdyandannes/Monocular-3D-Object-Detection.git
 python3 train_1010.py
+
+
+docker run -it --gpus all -v /home/liuchenghua/kitti_object_vis/data/object/training:/kitti/training -v /home/liuchenghua/test_detection/:/test_detection floydhub/tensorflow:1.13-gpu.cuda9cudnn7-py3_aws.42 bash
